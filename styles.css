@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 3rem;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.container {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 8rem;
+  color: #62929f;
+}
+
+.inputs {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 45rem;
+  height: 5rem;
+  font-size: 2.4rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-bottom: solid 2.5px #62929f;
+  outline: none;
+}
+
+::placeholder {
+  color: #b7d8df;
+  opacity: 0.5;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  font-size: 3.5rem;
+  background-color: #62929f;
+  border-radius: 5px;
+  border-color: #fff;
+  margin-left: -3.9rem;
+  color: #fff;
+  outline: none;
+}
+
+.clear__btn {
+  width: 45rem;
+  height: 4rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f25f5c;
+
+  font-size: 2.4rem;
+  color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+.clear__btn--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.lists {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lists li {
+  list-style: none;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  flex: 1;
+  color: #62929f;
+}
+
+.task {
+  width: 45rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 1px solid #62929f;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: all 0.5s ease;
+
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+.btn-done,
+.btn-trash {
+  height: 3.5rem;
+  font-size: 3.5rem;
+  color: #62929f;
+  border: none;
+  cursor: pointer;
+  background: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-done:active,
+.btn-trash:active {
+  background: white;
+}
+
+.ri-check-line,
+.ri-close-line {
+  pointer-events: none;
+}
+
+.completed {
+  opacity: 0.5;
+  transform: scale(0.96);
+}
+
+footer {
+  font-size: 1.6rem;
+}
